@@ -3,7 +3,7 @@ let homepage_list = document.querySelectorAll('.homepage .fixed_line .homepage_i
 let homepage_list_2 = document.querySelectorAll('.homepage .fixed_line .homepage_item_names .homepage_item_name');
 let homepage_count = homepage_list.length;
 let homepage_active = 0;
-setInterval(myTimer, 3000);
+//setInterval(myTimer, 3000);
 
 function myTimer() {
     homepage_active = homepage_active >= homepage_count - 1 ? 0 : homepage_active + 1;
@@ -53,6 +53,7 @@ next.onclick = () => {
     active = active >= count - 1 ? 0 : active + 1;
     leftMockup = leftMockup + left_each_item;
     carousel.classList.remove('right');
+    myTimer();
     changeCarousel();
 }
 prev.onclick = () => {
